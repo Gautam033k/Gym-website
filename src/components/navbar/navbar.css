@@ -1,0 +1,243 @@
+nav {
+  width: 100vw;
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: transparent;
+  transition: 1s ease-in-out;
+}
+
+nav a:hover {
+  padding: 10px;
+  background-color: var(--color-primary);
+  border-radius: 5px;
+}
+
+.navactive {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  align-content: flex-end;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  z-index: 3;
+  place-items: center;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157);
+  background-color: var(--color-primary);
+  transition: 0.6s ease-in-out;
+}
+.navactive img {
+  display: none;
+}
+.navactive ul {
+  margin-left: 50%;
+}
+
+.window-scroll {
+  background: var(--color-primary);
+  border-bottom: 1px solid var(--color-white);
+  box-shadow: 0 1rem 1rem var(--color-primary-variant);
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav button {
+  display: none;
+}
+.burger-menu {
+  display: none;
+}
+.nav__items {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav__logo {
+  display: flex;
+}
+
+.nav__logo h3 {
+  margin-top: 10px;
+}
+
+.nav__signin-signup {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav__logo h3 {
+  font-size: 1.7rem;
+}
+
+/*====== MEDIA QUERIES TABLET==============*/
+@media screen and (max-width: 1024px) {
+  nav {
+    background: var(--color-primary);
+  }
+  .nav__container {
+    position: relative;
+    width: 100vw;
+  }
+
+  .nav__logo {
+    margin-left: 2rem;
+    position: relative;
+  }
+
+  .nav__items {
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    background: var(--color-white);
+    height: max-content;
+    width: 18rem;
+    box-shadow: -2rem 2rem 3rem rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    gap: 0;
+    z-index: 3;
+    display: none;
+  }
+
+  .nav__items li {
+    width: 100%;
+    height: 6rem;
+  }
+
+  .nav__items li a {
+    color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    transition: all 400ms ease;
+  }
+  .nav__items li a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .nav__signin-signup {
+    display: none;
+  }
+
+  .nav__logo {
+    position: relative;
+    left: 0;
+    transform: translate(0);
+  }
+  nav button {
+    display: inline-block;
+    margin-right: 1.4rem;
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  nav button#close-btn {
+    display: none;
+  }
+
+  nav button i {
+    font-size: 2.4rem;
+  }
+}
+/*====== MEDIA QUERIES Mobile==============*/
+
+@media screen and (max-width: 600px) {
+  nav {
+    background: transparent;
+  }
+  .burger-menu {
+    margin-left: 50%;
+  }
+  .nav__logo {
+    margin-left: 1rem;
+  }
+
+  .nav__items li a {
+    justify-content: center;
+    padding: 0;
+  }
+
+  /**/
+  /*NAV items*/
+
+  .nav__items li {
+    width: 100%;
+    height: 6rem;
+  }
+
+  .nav__items li a {
+    color: var(--color-black);
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    display: block;
+    padding-left: 4.5rem;
+    display: flex;
+    align-items: center;
+    transition: all 400ms ease;
+  }
+  .nav__items li a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  /*==============*/
+
+  .burger-menu {
+    /* height: 20%; */
+    width: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .burger-bar {
+    width: 30%;
+    height: 0.4em;
+    background-color: #fff;
+    border-radius: 0.5em;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: inherit;
+  }
+
+  .burger-bar.clicked:nth-child(1) {
+    transform: rotate(45deg) translate(0.6em, 1em);
+    /* transform: rotate(45deg) translate(0.75em, 1.25em); */
+    transition: ease-out 0.5s;
+  }
+  .burger-bar.clicked:nth-child(2) {
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+  }
+
+  .burger-bar.clicked:nth-child(3) {
+    transform: rotate(135deg) translate(0.8em, 0.9em);
+    /* transform: rotate(135deg) translate(-0.5em, 1em); */
+    transition: ease-out 0.5s;
+  }
+
+  .burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}

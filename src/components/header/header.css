@@ -1,0 +1,165 @@
+header {
+  background: url('../../assets/gymbanner.png') no-repeat top center/100vw;
+  opacity: 0.9;
+  max-width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-bottom: (var(--bottom-section-padding));
+}
+
+.header__title {
+  padding-top: 12rem;
+  color: var(--color-white);
+}
+.header__title span {
+  color: var(--color-primary);
+}
+header p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  /* transition: 1s ease-in; */
+}
+
+.header__image {
+  width: 92%;
+  margin: 0 auto;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cta a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  font-weight: 400;
+  background: #000;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1rem;
+}
+
+.cta a:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.cta .logo {
+  width: 2rem;
+}
+
+.cta a h4 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.header__socials {
+  /* background: red; */
+  position: absolute;
+  left: 3rem;
+  top: 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.header_decorator-1 {
+  position: absolute;
+}
+.header_decorator-2 {
+  position: absolute;
+  right: 0;
+  margin-top: -24rem;
+}
+
+.header__image {
+  border-radius: 15px;
+}
+.header__btn {
+  width: 160px;
+  height: 50px;
+  font-size: 1.4rem;
+  padding: 13px 10px 10px 10px;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.header__btn:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+/*====== MEDIA QUERIES TABLET==============*/
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding-bottom: var(--bottom-section-padding-mobile);
+    background: var(--color-primary);
+  }
+
+  .header__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__image {
+    display: none;
+  }
+
+  .cta {
+    margin-top: 3rem;
+  }
+  .header__socials {
+    top: 24%;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .header_decorator-2 {
+    margin-top: -5%;
+    width: 20%;
+  }
+}
+/********HEADER MOBILE *****/
+
+@media screen and (max-width: 600px) {
+  .header__contianer {
+    background: url('../../assets/gymbannermobike.png');
+    height: 100vh;
+    opacity: 0.9;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__contianer h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .header__contianer h1 span {
+    font-size: 6rem;
+  }
+  .header__contianer p {
+    margin-top: 10%;
+  }
+
+  .header_decorator-2 {
+    margin-top: 7%;
+  }
+
+  /* .cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  } */
+
+  .header__socials {
+    display: none;
+  }
+}
